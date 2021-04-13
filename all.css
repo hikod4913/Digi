@@ -473,6 +473,9 @@ a{
 .product .product-list li{
     margin-bottom: 20px;
 }
+.product .product-list .list-pic > img{
+    display: none;
+}
 .product .product-list .list-pic a{
        display: block;
 } 
@@ -500,6 +503,9 @@ a{
     padding-bottom: 10px;
 }
 @media screen and (min-width: 1024px){
+    .product .product-list .list-pic > img{
+        display: block;
+    }
     .product .product-list .list-pic{
         position: relative;
         perspective: 1000px;
