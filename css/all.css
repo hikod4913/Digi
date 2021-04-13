@@ -17,6 +17,9 @@ a{
 .section-title{
     font-size: 0;
 }
+.container-fluid{
+    padding: 0;
+}
 
 /* index page end */
 /* header */
