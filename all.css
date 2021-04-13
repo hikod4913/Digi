@@ -44,7 +44,6 @@ a{
     left: 0;
     bottom: -50px;
     width: 100%;
-    padding: 20px;
     color: #000;
     font-weight: 700;
     background-color: #fff;
@@ -52,6 +51,11 @@ a{
     border-radius: 10px;
     transform: scale(0);
     transition: .3s;
+}
+.navbar-nav .nav-item .log-in span{
+    display: block;
+    padding: 20px;
+    border-radius: 10px;
 }
 .navbar-nav .nav-item .log-in.open{
     transform: scale(1);
@@ -63,6 +67,63 @@ a{
         left: auto;
         right: 0;
         bottom: -65px;
+        transition: .3s;
+    }
+    .navbar-nav .nav-item .log-in:hover{
+        border-radius: 0;
+        background-color: #6366f1;
+        color: #fff;
+        transition: .3s .2s;
+    }
+    .navbar-nav .nav-item .log-in span{
+        position: relative;
+    }
+    .navbar-nav .nav-item .log-in span:hover{
+        border-radius: 0;
+    }
+    .navbar-nav .nav-item .log-in:before,
+    .navbar-nav .nav-item .log-in:after,
+    .navbar-nav .nav-item .log-in span:before,
+    .navbar-nav .nav-item .log-in span:after{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 5px;
+        background-color: #6366f1;
+        transition: .3s .2s;
+    }
+    .navbar-nav .nav-item .log-in:before{
+        top: 0;
+        left: 0;
+    }
+    .navbar-nav .nav-item .log-in:after{
+        bottom: 0;
+        right: 0;
+    }
+    .navbar-nav .nav-item .log-in:hover:before,
+    .navbar-nav .nav-item .log-in:hover:after{
+        width: 100%;
+    }
+    .navbar-nav .nav-item .log-in span:before,
+    .navbar-nav .nav-item .log-in span:after{
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 0;
+        background-color: #6366f1;
+        transition: .3s;
+    }
+    .navbar-nav .nav-item .log-in span:before{
+        left: 0;
+        bottom: 0;
+    }
+    .navbar-nav .nav-item .log-in span:after{
+        right: 0;
+        top: 0;
+    }
+    .navbar-nav .nav-item .log-in span:hover:before,
+    .navbar-nav .nav-item .log-in span:hover:after{
+        height: 100%;
     }
 }
 
@@ -897,3 +958,13 @@ a{
         transform: translateY(0);
     }
 }
+/* log-in page */
+
+
+
+/* shopping cart */
+.cart-section{
+    padding: 50px 0;
+    background-color: #d1d5db;
+}
+/* shopping cart */
