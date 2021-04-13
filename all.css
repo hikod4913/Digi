@@ -18,6 +18,7 @@ a{
     font-size: 0;
 }
 
+/* index page end */
 /* header */
 .header .navbar-brand{
     display: block;
@@ -25,10 +26,46 @@ a{
 }
 .header .navbar-nav{
     margin-left: auto;
+    position: relative;
 }
 .header .navbar-nav .nav-link{
     color: #000;
+    display: block;
 }
+.header .navbar-nav .nav-item{
+    display: flex;
+}
+.header .navbar-nav .nav-item .fas{
+    font-size: 30px;
+    margin: 0 10px;
+}
+.navbar-nav .nav-item .log-in{
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    width: 100%;
+    padding: 20px;
+    color: #000;
+    font-weight: 700;
+    background-color: #fff;
+    box-shadow: 2px 2px 3px #000;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: .3s;
+}
+.navbar-nav .nav-item .log-in.open{
+    transform: scale(1);
+    z-index: 999;
+}
+@media screen and (min-width: 992px){
+    .navbar-nav .nav-item .log-in{
+        width: 50%;
+        left: auto;
+        right: 0;
+        bottom: -65px;
+    }
+}
+
 
 /* banner */
 .banner .carousel-indicators li{
@@ -199,6 +236,31 @@ a{
         padding: 0 0 0 50px;
         font-size: 1rem;
     }
+    .master .master-item .master-pic{
+        position: relative;
+        overflow: hidden;
+    }
+    .master .master-item .master-pic:before,
+    .master .master-item .master-pic:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, .2);
+        transition: .3s;
+    }
+    .master .master-item .master-pic:before{
+        transform: translate(-100%, -100%);
+    }
+    .master .master-item .master-pic:after{
+        transform: translate(100%, 100%);
+    }
+    .master .master-item .master-pic:hover:before,
+    .master .master-item .master-pic:hover:after{
+        transform: translate(0, 0);
+    }
 }
 
 
@@ -322,6 +384,10 @@ a{
     }
     .pitchfork .pitchfork-item{
         width: 23%;
+        transition: .3s;
+    }
+    .pitchfork .pitchfork-item:hover{
+        box-shadow: 3px 3px 5px #ccc;
     }
 }
 
@@ -710,4 +776,118 @@ a{
     .digital-copyright .copyright-statement span{
         padding-left: 0;
     }  
+}
+/* index page end */
+
+
+
+
+/* log-in page */
+.log-in-index .digi-icon .icon-pic{
+    display: block;
+    width: 24px;
+    margin: 0 10px;
+}
+.log-in-index .digi-txt{
+    display: none !important;
+}
+.log-in-index .digi-log-in{
+    width: 100%;
+    height: 100vh;
+    padding: 20px 0;
+    background-color: #152546;
+    flex-direction: column;
+}
+.log-in-index .digi-log-in .log-data{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transform: translateY(34px);
+}
+.log-in-index .digi-log-in h2{
+    width: 240px;
+    font-size: 0;
+    margin-bottom: 20px;
+}
+.log-data .social-in{
+    margin-bottom: 10px;
+}
+.log-data .social-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    border: 2px solid #fff;
+    text-align: center;
+    margin: 0 10px;
+}
+.log-data .social-pic .fab{
+    line-height: 50px;
+    font-size: 24px;
+}
+.log-data p{
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.log-data form{
+    width: 100%;
+    flex-direction: column;
+}
+.log-data form input{
+    padding: 10px 5px;
+}
+.log-data form input:first-of-type{
+    margin-bottom: 20px;
+}
+.log-data form input:last-of-type{
+    margin-bottom: 5px;
+}
+.log-data > a:nth-of-type(1){
+    padding: 5px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.log-data > a:nth-of-type(2){
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 50px;
+    background-color: #6366f1;
+    color: #fff;
+}
+.digi-icon{
+    margin: auto auto 0 auto;
+}
+@media screen and (min-width: 992px) {
+    .log-in-index .digi-txt{
+        display: flex !important;
+        background-color: #525252;
+        padding: 10px 0;
+        flex-direction: column;
+    }  
+    .digi-txt .digi-title{
+        margin: auto;
+        transform: translateY(50%);
+        padding: 0 15%;
+    }
+    .digi-txt .digi-title h2{
+        color: #fff;
+        font-size: 50px;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+    .digi-txt .digi-title p{
+        color: #fff;
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    .digi-log-in .digi-icon{
+        display: none !important;
+    }  
+    .log-in-index .digi-log-in .log-data{
+        transform: translateY(0);
+    }
 }
