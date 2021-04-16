@@ -971,8 +971,145 @@ a{
 
 
 /* shopping cart */
-.cart-section{
+.cart{
     padding: 50px 0;
     background-color: #d1d5db;
+}
+.cart .container{
+    padding: 0;
+}
+.cart-content{
+    padding: 50px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.cart h2{
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+.cart .cart-list{
+    padding: 0 20px 20px;
+    border-bottom: 1px solid #ccc;
+}
+.cart .cart-list li{
+    width: 20%;
+    position: relative;
+}
+.cart .cart-list li ~ li:before{
+    content: '';
+    position: absolute;
+    width: 55%;
+    height: 6px;
+    background-color: #ccc;
+    border-radius: 20px;
+    top: 20px;
+    left: -45%;
+    transform: translateY(-50%);
+}
+.cart .cart-list .check-cart:after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 6px;
+    background-color: #6fe6b7;
+    border-radius: 20px;
+    top: 20px;
+    left: -45%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.cart .cart-list li h3{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 auto;
+    font-size: 20px;
+    background-color: #6fe6b7;
+    color: #fff;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.cart .cart-list li p{
+    text-align: center;
+    font-size: 14px;
+}
+.cart .cart-content > h3{
+    padding: 20px 0;
+    font-size: 20px;
+}
+.cart .detail-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+.cart .detail-list .list-description{
+    width: 50%;
+}
+.cart .list-description .list-pic{
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.cart .list-description h4{
+    font-size: 14px;
+}
+.cart .list-description span{
+    font-size: 10px;
+    color: #aaa;
+}
+.cart .detail-list .list-calc{
+    width: 50%;
+}
+.cart .list-calc button{
+    border: none;
+    background-color: #fff;
+}
+.cart .list-calc button .fal{
+    font-size: 14px;
+}
+.cart .list-calc input{
+    width: 30px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+.cart .list-calc .calc-price{
+    margin-left: 20px;
+}
+@media screen and (max-width: 767px) {
+    .cart .container{
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 576px) {
+   .cart .cart-list li ~ li:before{
+       width: 75%;
+       left: -55%;
+   }
+   .cart .cart-list .check-cart:after{
+       width: 30%;
+       left: -55%;
+   }         
+}
+@media screen and (min-width: 768px) {
+    .cart-content{
+        padding: 50px;
+    }
+    .cart .cart-list{
+        padding: 0 50px 20px;
+    }  
+}
+@media screen and (min-width: 992px){
+    .cart .container{
+        padding: 0 15px;
+    }
+    .cart-content h2{
+        font-size: 30px;
+    }
+    
 }
 /* shopping cart */
