@@ -1078,7 +1078,42 @@ a{
     border: 1px solid #aaa;
 }
 .cart .list-calc .calc-price{
-    margin-left: 20px;
+    margin-left: 10px;
+}
+.cart .total-price{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-bottom: 1px solid #ddd;
+}
+.cart .total-price li{
+    display: flex;
+    padding: 5px 0;
+}
+.cart .total-price li div{
+    width: 70px;
+}
+.cart .total-price li div:last-child{
+    text-align: right;
+}
+.cart .path-block{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart .path-block .previous-btn a{
+    color: #000;
+}
+.cart .path-block button{
+    padding: 0;
+}
+.cart .path-block button a{
+    color: #fff;
+    display: block;
+    padding: .375rem .75rem;
 }
 @media screen and (max-width: 767px) {
     .cart .container{
