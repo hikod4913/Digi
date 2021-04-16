@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
@@ -8,10 +9,12 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/all.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous" />
 </head>
+
 <body>
-    
+
 
     <!-- header -->
     <header class="header">
@@ -58,7 +61,7 @@
 
     <!-- main -->
     <main>
-        <section class="cart check">
+        <section class="cart complete">
             <div class="container">
                 <div class="cart-content">
                     <h2>購物車</h2>
@@ -67,7 +70,7 @@
                             <h3>1</h3>
                             <p>確認購物車</p>
                         </li>
-                        <li class="check-page">
+                        <li>
                             <h3>2</h3>
                             <p>付款與運送方式</p>
                         </li>
@@ -75,77 +78,62 @@
                             <h3>3</h3>
                             <p>填寫資料</p>
                         </li>
-                        <li>
+                        <li class="complete-page">
                             <h3>4</h3>
                             <p>完成訂購</p>
                         </li>
                     </ol>
-                    <h3>訂單明細</h3>
-                    <ul class="detail-list">
-                        <li>
-                            <div class="list-description d-flex align-items-center">
-                                <div class="list-pic">
-                                    <img src="https://picsum.photos/50/50/?random=921">
+                    <div class="complete-order">
+                        <h2>訂單成立</h2>
+                        <h3>訂單明細</h3>
+                        <ul class="detail-list total-detail">
+                            <li>
+                                <div class="list-description d-flex align-items-center">
+                                    <div class="list-pic">
+                                        <img src="https://picsum.photos/50/50/?random=921">
+                                    </div>
+                                    <div class="list-txt">
+                                        <h4>Chicken momo</h4>
+                                        <span>#41551</span>
+                                    </div>
                                 </div>
-                                <div class="list-txt">
-                                    <h4>Chicken momo</h4>
-                                    <span>#41551</span>
+                                <div class="final-price">
+                                    <span>X 1</span>
+                                    <span>$10.50</span>
                                 </div>
-                            </div>
-                            <div class="list-calc d-flex align-items-center justify-content-end">
-                                <button>
-                                    <i class="fal fa-minus"></i>
-                                </button>
-                                <input type="text" name="" id="">
-                                <button>
-                                    <i class="fal fa-plus"></i>
-                                </button>
-                                <div class="calc-price">$10.50</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-description d-flex align-items-center">
-                                <div class="list-pic">
-                                    <img src="https://picsum.photos/50/50/?random=841">
+                            </li>
+                            <li>
+                                <div class="list-description d-flex align-items-center">
+                                    <div class="list-pic">
+                                        <img src="https://picsum.photos/50/50/?random=841">
+                                    </div>
+                                    <div class="list-txt">
+                                        <h4>Spicy Mexican potatoes</h4>
+                                        <span>#66999</span>
+                                    </div>
                                 </div>
-                                <div class="list-txt">
-                                    <h4>Spicy Mexican potatoes</h4>
-                                    <span>#66999</span>
+                                <div class="final-price">
+                                    <span>X 1</span>
+                                    <span>$10.50</span>
                                 </div>
-                            </div>
-                            <div class="list-calc d-flex align-items-center justify-content-end">
-                                <button>
-                                    <i class="fal fa-minus"></i>
-                                </button>
-                                <input type="text" name="" id="">
-                                <button>
-                                    <i class="fal fa-plus"></i>
-                                </button>
-                                <div class="calc-price">$10.50</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-description d-flex align-items-center">
-                                <div class="list-pic">
-                                    <img src="https://picsum.photos/50/50/?random=581">
+                            </li>
+                            <li>
+                                <div class="list-description d-flex align-items-center">
+                                    <div class="list-pic">
+                                        <img src="https://picsum.photos/50/50/?random=581">
+                                    </div>
+                                    <div class="list-txt">
+                                        <h4>Breakfast</h4>
+                                        <span>#86577</span>
+                                    </div>
                                 </div>
-                                <div class="list-txt">
-                                    <h4>Breakfast</h4>
-                                    <span>#86577</span>
+                                <div class="final-price">
+                                    <span>X 1</span>
+                                    <span>$10.50</span>
                                 </div>
-                            </div>
-                            <div class="list-calc d-flex align-items-center justify-content-end">
-                                <button>
-                                    <i class="fal fa-minus"></i>
-                                </button>
-                                <input type="text" name="" id="">
-                                <button>
-                                    <i class="fal fa-plus"></i>
-                                </button>
-                                <div class="calc-price">$10.50</div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                     <ul class="total-price">
                         <li>
                             <div>數量：</div>
@@ -165,11 +153,8 @@
                         </li>
                     </ul>
                     <div class="path-block">
-                        <div class="previous-btn">
-                            <a href="index.html"><i class="fas fa-long-arrow-left"></i> 返回購物</a>
-                        </div>
-                        <button type="button" class="btn btn-primary">
-                            <a href="Shooping Cart Pay and Tansport.html">下一步</a>
+                        <button type="button" class="btn btn-primary back-index">
+                            <a href="index.html">返回首頁</a>
                         </button>
                     </div>
                 </div>
@@ -262,7 +247,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- copyright -->
     <div class="digital-copyright">
         <h2 class="section-title">Digital Cube</h2>
@@ -289,4 +274,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./all.js"></script>
 </body>
+
 </html>

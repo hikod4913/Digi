@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
-    <title>Shopping Cart Pay and Transport</title>
+    <title>Shopping Cart Check Order</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
         crossorigin="anonymous">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/all.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous" />
 </head>
+
 <body>
-    
+
 
     <!-- header -->
     <header class="header">
@@ -58,7 +61,7 @@
 
     <!-- main -->
     <main>
-        <section class="cart check">
+        <section class="cart pay-transport">
             <div class="container">
                 <div class="cart-content">
                     <h2>購物車</h2>
@@ -67,11 +70,11 @@
                             <h3>1</h3>
                             <p>確認購物車</p>
                         </li>
-                        <li class="check-page">
+                        <li>
                             <h3>2</h3>
                             <p>付款與運送方式</p>
                         </li>
-                        <li>
+                        <li class="pay-page">
                             <h3>3</h3>
                             <p>填寫資料</p>
                         </li>
@@ -80,72 +83,36 @@
                             <p>完成訂購</p>
                         </li>
                     </ol>
-                    <h3>訂單明細</h3>
-                    <ul class="detail-list">
-                        <li>
-                            <div class="list-description d-flex align-items-center">
-                                <div class="list-pic">
-                                    <img src="https://picsum.photos/50/50/?random=921">
-                                </div>
-                                <div class="list-txt">
-                                    <h4>Chicken momo</h4>
-                                    <span>#41551</span>
-                                </div>
+                    <div class="payment-method">
+                        <h2>付款方式</h2>
+                        <form action="">
+                            <div class="credit-card">
+                                <input type="radio" name="pay" id="credit">
+                                <label for="credit">信用卡付款</label>
                             </div>
-                            <div class="list-calc d-flex align-items-center justify-content-end">
-                                <button>
-                                    <i class="fal fa-minus"></i>
-                                </button>
-                                <input type="text" name="" id="">
-                                <button>
-                                    <i class="fal fa-plus"></i>
-                                </button>
-                                <div class="calc-price">$10.50</div>
+                            <div class="atm-method">
+                                <input type="radio" name="pay" id="atm">
+                                <label for="atm">網路 ATM</label>
                             </div>
-                        </li>
-                        <li>
-                            <div class="list-description d-flex align-items-center">
-                                <div class="list-pic">
-                                    <img src="https://picsum.photos/50/50/?random=841">
-                                </div>
-                                <div class="list-txt">
-                                    <h4>Spicy Mexican potatoes</h4>
-                                    <span>#66999</span>
-                                </div>
+                            <div class="convenience-method">
+                                <input type="radio" name="pay" id="covenience">
+                                <label for="covenience">超商代碼</label>
                             </div>
-                            <div class="list-calc d-flex align-items-center justify-content-end">
-                                <button>
-                                    <i class="fal fa-minus"></i>
-                                </button>
-                                <input type="text" name="" id="">
-                                <button>
-                                    <i class="fal fa-plus"></i>
-                                </button>
-                                <div class="calc-price">$10.50</div>
+                        </form>
+                    </div>
+                    <div class="transport-method">
+                        <h2>運送方式</h2>
+                        <form action="">
+                            <div class="delivery-method">
+                                <input type="radio" name="transport" id="delivery">
+                                <label for="delivery">黑貓宅配</label>
                             </div>
-                        </li>
-                        <li>
-                            <div class="list-description d-flex align-items-center">
-                                <div class="list-pic">
-                                    <img src="https://picsum.photos/50/50/?random=581">
-                                </div>
-                                <div class="list-txt">
-                                    <h4>Breakfast</h4>
-                                    <span>#86577</span>
-                                </div>
+                            <div class="shop-method">
+                                <input type="radio" name="transport" id="shop">
+                                <label for="shop">超商取貨</label>
                             </div>
-                            <div class="list-calc d-flex align-items-center justify-content-end">
-                                <button>
-                                    <i class="fal fa-minus"></i>
-                                </button>
-                                <input type="text" name="" id="">
-                                <button>
-                                    <i class="fal fa-plus"></i>
-                                </button>
-                                <div class="calc-price">$10.50</div>
-                            </div>
-                        </li>
-                    </ul>
+                        </form>
+                    </div>
                     <ul class="total-price">
                         <li>
                             <div>數量：</div>
@@ -165,11 +132,11 @@
                         </li>
                     </ul>
                     <div class="path-block">
-                        <div class="previous-btn">
-                            <a href="index.html"><i class="fas fa-long-arrow-left"></i> 返回購物</a>
-                        </div>
+                        <button type="button" class="btn btn-primary previous">
+                            <a href="./Shopping Cart Check.html">上一步</a>
+                        </button>
                         <button type="button" class="btn btn-primary">
-                            <a href="Shooping Cart Pay and Tansport.html">下一步</a>
+                            <a href="./Shopping Cart Fill In.html">下一步</a>
                         </button>
                     </div>
                 </div>
@@ -262,7 +229,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- copyright -->
     <div class="digital-copyright">
         <h2 class="section-title">Digital Cube</h2>
@@ -289,4 +256,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./all.js"></script>
 </body>
+
 </html>

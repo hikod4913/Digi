@@ -867,11 +867,13 @@ a{
     flex-direction: column;
 }
 .log-in-index .digi-log-in .log-data{
+    width: 70%;
+    height: 100vh;
+    margin: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    transform: translateY(34px);
+
 }
 .log-in-index .digi-log-in h2{
     width: 240px;
@@ -942,10 +944,12 @@ a{
         background-color: #525252;
         padding: 10px 0;
         flex-direction: column;
+        justify-content: center;
     }  
     .digi-txt .digi-title{
-        margin: auto;
-        transform: translateY(50%);
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
         padding: 0 15%;
     }
     .digi-txt .digi-title h2{
@@ -982,8 +986,9 @@ a{
     padding: 50px 20px;
     background-color: #fff;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px #000;
 }
-.cart h2{
+.cart .cart-content > h2:first-of-type{
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 30px;
@@ -1007,7 +1012,9 @@ a{
     left: -45%;
     transform: translateY(-50%);
 }
-.cart .cart-list .check-cart:after{
+.check .cart-list .check-page:after,
+.pay-transport .cart-list .pay-page:after,
+.fill-in .cart-list .fill-in-page:after{
     content: '';
     position: absolute;
     width: 20%;
@@ -1018,6 +1025,12 @@ a{
     left: -45%;
     transform: translateY(-50%);
     z-index: 1;
+}
+.pay-transport .cart-list li:nth-of-type(2)::before,
+.fill-in .cart-list li:nth-of-type(2):before,
+.fill-in .cart-list li:nth-of-type(3):before,
+.complete .cart-list li ~ li:before{
+    background-color: #6fe6b7;
 }
 .cart .cart-list li h3{
     width: 40px;
@@ -1082,7 +1095,7 @@ a{
 }
 .cart .total-price{
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -1115,20 +1128,88 @@ a{
     display: block;
     padding: .375rem .75rem;
 }
+
+.cart .payment-method,
+.cart .transport-method,
+.fill-in .user-info{
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+.cart .payment-method h2,
+.cart .transport-method h2,
+.fill-in .user-info h2{
+    font-size: 20px;
+    padding: 10px 0;
+}
+.cart form > div{
+    padding: 15px 0 15px 1em;
+}
+.pay-transport form input{
+    margin-right: 10px;
+}
+.cart .path-block .previous a{
+    color: #007bff;
+    border: 1px solid #007bff;
+    background-color: #fff;
+}
+
+.fill-in .user-info label{
+    display: block;
+    margin-bottom: 5px;
+}
+.fill-in .user-info input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.fill-in .user-info input:focus::placeholder{
+    color: transparent;
+}
+.fill-in .user-info .adress-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.fill-in .user-info .adress-info input:first-of-type,
+.fill-in .user-info .adress-info input:nth-of-type(2){
+    width: 49%;
+    margin-bottom: 10px;
+}
+.fill-in .user-info .adress-info input:last-of-type{
+    width: 100%;
+}
+.complete .complete-order h2{
+    font-size: 30px;
+    text-align: center;
+    padding: 15px 0;
+}
+.complete .complete-order .final-price span:first-child{
+    margin-right: 10px;
+}
+.complete .path-block .back-index{
+    margin-left: auto;
+}
 @media screen and (max-width: 767px) {
     .cart .container{
         max-width: 100%;
     }
+    .cart-content{
+        box-shadow: 0 0 0 transparent;
+    }
 }
 @media screen and (min-width: 576px) {
-   .cart .cart-list li ~ li:before{
+   .cart .cart-list li ~ li:before,
+   .complete .cart-list li ~ li:before{
        width: 75%;
        left: -55%;
    }
-   .cart .cart-list .check-cart:after{
+   .check .cart-list .check-page:after,
+   .pay-transport .cart-list .pay-page:after,
+   .fill-in .cart-list .fill-in-page:after{
        width: 30%;
        left: -55%;
-   }         
+   }
 }
 @media screen and (min-width: 768px) {
     .cart-content{
@@ -1142,9 +1223,5 @@ a{
     .cart .container{
         padding: 0 15px;
     }
-    .cart-content h2{
-        font-size: 30px;
-    }
-    
 }
 /* shopping cart */
