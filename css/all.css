@@ -861,7 +861,7 @@ a{
 }
 .log-in-index .digi-log-in{
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 20px);
     padding: 20px 0;
     background-color: #152546;
     flex-direction: column;
@@ -949,7 +949,7 @@ a{
     .digi-txt .digi-title{
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
+        height: calc(100vh - 65px);
         padding: 0 15%;
     }
     .digi-txt .digi-title h2{
