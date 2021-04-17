@@ -1089,7 +1089,14 @@ a{
     width: 30px;
     border-radius: 5px;
     border: 1px solid #aaa;
+    text-align: center;
 }
+.cart .list-calc input::-webkit-outer-spin-button,
+.cart .list-calc input::-webkit-inner-spin-button{
+    appearance: none;
+    margin: 0;
+}
+
 .cart .list-calc .calc-price{
     margin-left: 10px;
 }
