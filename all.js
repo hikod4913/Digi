@@ -46,26 +46,28 @@ total.innerHTML = calcSubtotal + parseInt(ship);
 
 // 按下按鈕之後的所有計算
 minus1.addEventListener('click', function () {
-    let minNum1 = parseInt(order1.value);
-    if (minNum1-- >= 1) {
+    let minNum1 = parseInt(order1.value); // 取 input 的值，轉成數字型態
+    // 判斷數字大小，數量不會有負值，商品最少量為1
+    if (minNum1-- >= 2) {
         order1.value = minNum1--;
     }
     else {
-        order1.value = 0;
+        order1.value = 1;
     }
+    // 判斷完畢之後，依序將計算完的值放入HTML
     quantity.innerHTML = parseInt(order1.value) + parseInt(order2.value) + parseInt(order3.value);
     let calcSubtotal = order1.value * item1 + order2.value * item2 + order3.value * item3;
     subtotal.innerHTML = calcSubtotal;
-    total.innerHTML = pacalcSubtotal + parseInt(ship);
+    total.innerHTML = calcSubtotal + parseInt(ship);
 })
 
 minus2.addEventListener('click', function () {
     let minNum2 = parseInt(order2.value);
-    if (minNum2-- >= 1) {
+    if (minNum2-- >= 2) {
         order2.value = minNum2--;
     }
     else {
-        order2.value = 0;
+        order2.value = 1;
     }
     quantity.innerHTML = parseInt(order1.value) + parseInt(order2.value) + parseInt(order3.value);
     let calcSubtotal = order1.value * item1 + order2.value * item2 + order3.value * item3;
@@ -76,11 +78,11 @@ minus2.addEventListener('click', function () {
 
 minus3.addEventListener('click', function () {
     let minNum3 = parseInt(order3.value);
-    if (minNum3-- >= 1) {
+    if (minNum3-- >= 2) {
         order3.value = minNum3--;
     }
     else {
-        order3.value = 0;
+        order3.value = 1;
     }
     quantity.innerHTML = parseInt(order1.value) + parseInt(order2.value) + parseInt(order3.value);
     let calcSubtotal = order1.value * item1 + order2.value * item2 + order3.value * item3;
