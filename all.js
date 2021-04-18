@@ -39,6 +39,7 @@ var ship = 5; // 運費
 var calcSubtotal = order1.value * item1 + order2.value * item2 + order3.value * item3;
 
 // loading頁面後，先顯示的價格
+quantity.innerHTML = parseInt(order1.value) + parseInt(order2.value) + parseInt(order3.value);
 subtotal.innerHTML = calcSubtotal;
 costs.innerHTML = ship;
 total.innerHTML = calcSubtotal + parseInt(ship);
